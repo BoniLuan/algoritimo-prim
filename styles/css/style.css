@@ -1,3 +1,7 @@
+@font-face {
+  font-family: jetbrains;
+  src: url("JetBrainsMono-Bold.ttf");
+}
 body {
   box-sizing: border-box;
   background-color: black;
@@ -13,6 +17,12 @@ body nav {
   align-items: center;
   justify-content: center;
   font-size: 28px;
+  padding-bottom: 10px;
+  border-bottom: dotted rgb(57, 57, 57) 5px;
+}
+body nav h1 {
+  font-size: 32px;
+  font-family: jetbrains;
 }
 body main {
   display: flex;
@@ -20,31 +30,137 @@ body main {
   align-items: center;
   justify-content: center;
 }
-body main .form, body main .principal {
-  width: 800px;
+body main .form, body main .principal, body main .matriz {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: dotted white 4px;
   padding: 20px;
 }
-body main .form {
-  height: 200px;
+body main .form, body main .matriz {
+  min-height: 300px;
   flex-direction: column;
-  border-bottom: none;
 }
-body main .form input, body main .form label {
+body main .form input, body main .form label, body main .matriz input, body main .matriz label {
   width: 200px;
   height: 30px;
+  font-weight: 600;
 }
-body main .form input {
+body main .form input, body main .matriz input {
+  border-radius: 5px;
+  background-color: rgb(219, 219, 219);
   margin-bottom: 10px;
 }
-body main .form label {
+body main .form label, body main .matriz label {
   padding-top: 5px;
 }
+body main .form button, body main .matriz button {
+  border-radius: 4px;
+  outline: none;
+  width: 80px;
+  height: 30px;
+  background-color: rgb(148, 213, 243);
+  font-weight: 600;
+}
+body main .form button:hover, body main .matriz button:hover {
+  background-color: rgba(130, 195, 225, 0.946);
+}
+body main .form .div-arestas, body main .matriz .div-arestas {
+  display: flex;
+  padding: 10px;
+  width: 800px;
+  border: 3px solid rgb(57, 57, 57);
+}
+body main .form .div-arestas h3, body main .matriz .div-arestas h3 {
+  margin: 0 10px;
+}
+body main .form #lV, body main .matriz #lV {
+  width: auto;
+  height: auto;
+  padding: 0;
+}
 body main .principal {
-  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+}
+body main .principal .matriz {
+  min-height: 100%;
+  min-width: 30%;
+  align-self: flex-start;
+}
+body main .principal .matriz td, body main .principal .matriz th {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(0, 0, 0);
+  text-align: center;
+  background-color: rgb(57, 57, 57);
+  font-weight: 700;
+  font-size: 18px;
+}
+body main .principal .matriz th, body main .principal .matriz td:first-child {
+  background-color: rgb(148, 213, 243);
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: "Arial Narrow Bold", sans-serif;
+}
+body main .principal .matriz th:first-child {
+  background-color: rgb(57, 57, 57);
+  color: rgb(148, 213, 243);
+  border: none;
+}
+body main .principal .agm {
+  min-width: 30%;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+body main .principal .agm input, body main .principal .agm label {
+  width: 50px;
+  height: 30px;
+  font-weight: 600;
+}
+body main .principal .agm input {
+  border-radius: 5px;
+  background-color: rgb(219, 219, 219);
+  margin-bottom: 10px;
+}
+body main .principal .agm label {
+  padding-top: 5px;
+}
+body main .principal .agm button {
+  border-radius: 4px;
+  outline: none;
+  width: 80px;
+  height: 30px;
+  background-color: rgb(148, 213, 243);
+  font-weight: 600;
+}
+body main .principal .agm button:hover {
+  background-color: rgba(130, 195, 225, 0.946);
+}
+body main .principal .agm h4 {
+  margin: 20px 0;
+}
+body main .principal .agm p {
+  margin: 0;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+body main .principal .agm #div-caminho {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15px;
+}
+body main .principal .agm #caminho {
+  margin-bottom: 5px;
+}
+
+.oculto {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */

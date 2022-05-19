@@ -9,18 +9,54 @@
 </head>
 <body>
     <nav> 
-        <h3> Algoritimo PRIM</h3>
+        <h1> ALGORITIMO PRIM</h1>
     </nav>
     <main >
-        <div class="form" style="display: none;">
-            <label>Quantidade de Vertices</label>
-            <input type="number" id="qtdV">
-            <label>Arestas</label>
-            <input type="text" name="" id="">
+        <div class="form" id="form-vertices">
+            <label>Quantidade de Vertices:</label>
+            <input type="number" id="qtdV" min='1' max='26' value="2">
+            <button id="btnAvancar">Avançar</button>
         </div>
-        <div class="principal">
 
+        <div id="form-arestas" class="form oculto">
+            <div class="div-arestas">
+                <h3>Arestas:</h3>
+                <label id="lV"></label>
+            </div>
+            <br>
+            <label>Defina as arestas: </label>
+            <input type="text" id="iArestas" placeholder="a-b-10">
+            <div>
+                <button id="addAresta">Adicionar</button>
+                <button id="btnAvancar2">Avançar</button>
+            </div>
         </div>
+
+        <div class="principal">
+            <div class="matriz oculto">
+                <table id="tabela">
+                    <thead><tr id="trH"></tr></thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+
+            <div id="div-agm" class="agm oculto">
+                <div clas="raiz">
+                    <label>Raiz:</label>
+                    <input type="text" id="raiz" maxlength='1' value="a">
+                    <div class="botoes">
+                        <button id="min">MIN</button>
+                        <button id="max">MAX</button>
+                    </div>
+                </div>
+                <div id="r" class="resultado">
+                    <h4 id="caminho"></h4>
+                    <div id="div-caminho"></div>
+                    <h4 id="custo"></h4>
+                </div>
+            </div>
+        </div>
+
     </main>
     <footer>
         <div></div>
@@ -31,5 +67,6 @@
     <script src="scripts/aresta.js" type="module"></script>
     <script src="scripts/grafo.js" type="module"></script>
     <script src="scripts/script.js" type="module"></script>
+    
 </body>
 </html>
